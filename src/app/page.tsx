@@ -1,12 +1,25 @@
+import Header from '@/components/layout/Header';
+import HeroSection from '@/components/home/HeroSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
+import ServicesSection from '@/components/home/ServicesSection';
+import AboutSection from '@/components/home/AboutSection';
+import InstagramSection from '@/components/home/InstagramSection';
+import ContactMapSection from '@/components/home/ContactMapSection';
+import Footer from '@/components/layout/Footer';
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-4xl sm:text-6xl font-serif text-gold-400 mb-4">
-        Tendance Attitud
-      </h1>
-      <p className="text-lg text-gold-200/80 max-w-xl">
-        Salon de coiffure & barbier d’exception à Saint-Maur-des-Fossés.
-      </p>
-    </main>
+    <div className="min-h-screen bg-olive-800 text-[#F7F5EE] selection:bg-gold-500 selection:text-olive-900">
+      <Header />
+      <main id="main-content">
+        <HeroSection />
+        <ReviewsSection />
+        <ServicesSection />
+        <AboutSection />
+        <InstagramSection />
+        <ContactMapSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
