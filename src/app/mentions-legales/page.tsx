@@ -6,8 +6,16 @@ import { ArrowLeft, ShieldCheck, Scale, FileText, Phone, MapPin } from 'lucide-r
 import Button from '../../components/ui/Button';
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales | Salon Tendance Attitud Allauch',
-  description: 'Mentions légales, politique de confidentialité et informations réglementaires du Salon Tendance Attitud à Allauch (13190).',
+  title: 'Mentions Légales & Confidentialité',
+  description:
+    'Mentions légales, politique de confidentialité, RGPD et informations réglementaires du Salon de coiffure Tendance Attitud à Allauch (13190).',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/mentions-legales',
+  },
 };
 
 export default function MentionsLegalesPage() {

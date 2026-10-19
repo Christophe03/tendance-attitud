@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
+      images: [
+        `${baseUrl}/images/hero/hero-center-v2.webp`,
+        `${baseUrl}/images/hero/hero-left-v2.webp`,
+        `${baseUrl}/images/hero/hero-right-v2.webp`,
+        `${baseUrl}/images/salon/team-v2.webp`,
+      ],
     },
     {
       url: `${baseUrl}/mentions-legales`,

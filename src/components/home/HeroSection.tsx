@@ -91,8 +91,8 @@ export default function HeroSection() {
         {/* Calligraphy text overlay across the triptych */}
         <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-center">
           <h1 className="w-full">
-            {/* Accessible screen-reader heading */}
-            <span className="sr-only">Du lisse aux Boucles</span>
+            {/* Accessible screen-reader heading with high-value local SEO keywords */}
+            <span className="sr-only">Tendance Attitud - Salon de Coiffure à Allauch : Du lisse aux Boucles</span>
 
             {/* Visual stylized typography matching maquette Home.png */}
             <div aria-hidden="true" className="w-full select-none">
