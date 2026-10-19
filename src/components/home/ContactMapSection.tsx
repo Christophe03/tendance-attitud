@@ -176,48 +176,47 @@ export default function ContactMapSection() {
           </div>
         </motion.div>
 
-        {/* Right Column: Map Card & GPS Itinerary */}
+        {/* Right Column: Interactive Map Card & GPS Itinerary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
           className="lg:col-span-6 flex flex-col justify-center"
         >
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:h-full lg:min-h-[500px] rounded-3xl overflow-hidden border border-gold-400/30 shadow-2xl bg-[#182315] group">
-            {/* Map image mockup */}
-            <Image
-              src="/images/map-mockup.webp"
-              alt="Carte de localisation du Salon Tendance Attitud à Allauch"
-              fill
-              sizes="(max-width: 1024px) 100vw, 600px"
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:h-full lg:min-h-[520px] rounded-3xl overflow-hidden border border-gold-400/30 shadow-2xl bg-[#182315] group">
+            {/* Interactive Google Map embed with Allauch Village Tendance Attitud */}
+            <iframe
+              title="Carte de localisation - Allauch Village Tendance Attitud, 44 avenue Salvador Allende"
+              src="https://maps.google.com/maps?q=Tendance+Attitud%2C+44+Avenue+Salvador+Allende%2C+13190+Allauch&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full min-h-[420px] lg:min-h-[520px] border-0"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
             />
 
-            {/* Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 pointer-events-none" />
-
             {/* Top Inset Badge: Location pin */}
-            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#11180E]/90 border border-gold-400/40 text-gold-300 text-xs font-semibold shadow-lg backdrop-blur-md">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#11180E]/95 border border-gold-400/50 text-gold-300 text-xs font-semibold shadow-lg backdrop-blur-md pointer-events-auto">
               <MapPin className="w-3.5 h-3.5 text-gold-400" />
-              <span>Allauch Village</span>
+              <span>Allauch Village — Tendance Attitud</span>
             </div>
 
             {/* Bottom Inset Overlay Card with GPS Button */}
-            <div className="absolute bottom-4 inset-x-4 sm:bottom-6 sm:inset-x-6 z-10 p-4 sm:p-5 rounded-2xl bg-[#11180E]/90 border border-gold-400/30 shadow-2xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="absolute bottom-4 inset-x-4 sm:bottom-6 sm:inset-x-6 z-10 p-4 sm:p-5 rounded-2xl bg-[#11180E]/95 border border-gold-400/40 shadow-2xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 pointer-events-auto">
               <div className="min-w-0">
                 <span className="font-serif font-bold text-sm sm:text-base text-gold-300 block truncate">
                   Tendance Attitud
                 </span>
-                <span className="text-xs text-[#F7F5EE]/75 block truncate">
-                  {SALON_INFO.address.street}
+                <span className="text-xs text-[#F7F5EE]/80 block truncate">
+                  44 avenue Salvador Allende, 13190 Allauch
                 </span>
               </div>
 
               <a
-                href={googleMapsUrl}
+                href="https://www.google.com/maps/dir/?api=1&destination=Tendance+Attitud,+44+Avenue+Salvador+Allende,+13190+Allauch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gold-400 hover:bg-gold-300 text-black font-semibold text-xs tracking-wider uppercase shadow-md transition-all active:scale-95 flex-shrink-0"
+                aria-label="Lancer l'itinéraire GPS vers Tendance Attitud Allauch"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gold-400 hover:bg-gold-300 text-black font-semibold text-xs tracking-wider uppercase shadow-md transition-all active:scale-95 flex-shrink-0"
               >
                 <Navigation className="w-3.5 h-3.5" />
                 <span>Itinéraire GPS</span>

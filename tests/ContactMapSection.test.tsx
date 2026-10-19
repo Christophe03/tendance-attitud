@@ -7,7 +7,7 @@ describe('ContactMapSection Component', () => {
   it('renders salon address, phone number, and hours', () => {
     render(<ContactMapSection />);
     expect(screen.getByText(/Salon Tendance Attitud/i)).toBeInTheDocument();
-    expect(screen.getByText(/44 avenue Salvador Allende, 13190 Allauch/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/44 avenue Salvador Allende, 13190 Allauch/i)[0]).toBeInTheDocument();
     expect(screen.getByText('06 59 26 65 33')).toBeInTheDocument();
     expect(screen.getByText('LUNDI: 09H - 18H')).toBeInTheDocument();
     expect(screen.getByText('MARDI: 09H - 18H')).toBeInTheDocument();
@@ -41,16 +41,18 @@ describe('ContactMapSection Component', () => {
     );
   });
 
-  it('renders map image with alt text and GPS directions button', () => {
+  it('renders interactive map with location and GPS directions button', () => {
     render(<ContactMapSection />);
-    const mapImg = screen.getByAltText(/Carte.*Allauch/i);
-    expect(mapImg).toBeInTheDocument();
-    expect(mapImg.getAttribute('src')).toContain('map-mockup.webp');
+    const mapFrame = screen.getByTitle(/Carte.*Allauch/i);
+    expect(mapFrame).toBeInTheDocument();
+    expect(mapFrame.getAttribute('src')).toContain('maps.google.com');
+
+    expect(screen.getByText(/Allauch Village — Tendance Attitud/i)).toBeInTheDocument();
 
     const gpsLink = screen.getByRole('link', { name: /Itinéraire GPS/i });
     expect(gpsLink).toHaveAttribute(
       'href',
-      expect.stringContaining('maps.google.com')
+      expect.stringContaining('destination=Tendance+Attitud')
     );
   });
 
