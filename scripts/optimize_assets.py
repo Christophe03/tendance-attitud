@@ -58,17 +58,95 @@ def extract_map(home_path: str, output_path: str):
     map_crop.save(output_path, 'WEBP', quality=90)
     print(f"Saved: {output_path} ({map_crop.size}, {os.path.getsize(output_path)} bytes)")
 
-def convert_region_to_webp(src_path: str, dst_path: str, quality: int = 90):
+def extract_region_to_webp(
+    home_img: Image.Image,
+    box: tuple,
+    dst_path: str,
+    temp_source_path: str = None,
+    quality: int = 90
+):
     """
-    Converts a region JPEG to optimized WebP.
+    Saves an optimized WebP image either from temp_source_path (if present)
+    or by cropping directly from Home.png (standalone fallback).
     """
-    if not os.path.exists(src_path):
-        print(f"Warning: source {src_path} does not exist.")
+    if temp_source_path and os.path.exists(temp_source_path):
+        img = Image.open(temp_source_path).convert('RGB')
+    elif home_img is not None:
+        img = home_img.crop(box).convert('RGB')
+    else:
+        print(f"Warning: Cannot generate {dst_path}, neither source nor mockup available.")
         return
 
-    img = Image.open(src_path).convert('RGB')
     img.save(dst_path, 'WEBP', quality=quality, method=6)
     print(f"Saved: {dst_path} ({img.size}, {os.path.getsize(dst_path)} bytes)")
+
+# Exact bounding boxes in maquettes/Home.png (width=1366, height=5798)
+MOCKUP_REGIONS = {
+    # 2. Hero triptych
+    'hero_left': {
+        'box': (10, 105, 450, 650),
+        'temp_name': 'hero_left.jpg',
+        'dst_rel': 'hero/hero-left.webp',
+    },
+    'hero_center': {
+        'box': (455, 105, 910, 650),
+        'temp_name': 'hero_center.jpg',
+        'dst_rel': 'hero/hero-center.webp',
+    },
+    'hero_right': {
+        'box': (915, 105, 1355, 650),
+        'temp_name': 'hero_right.jpg',
+        'dst_rel': 'hero/hero-right.webp',
+    },
+    # 3. Prestations
+    'cat_boucles': {
+        'box': (165, 1260, 395, 1490),
+        'temp_name': 'cat_boucles.jpg',
+        'dst_rel': 'prestations/boucles.webp',
+    },
+    'cat_lissage': {
+        'box': (430, 1260, 660, 1490),
+        'temp_name': 'cat_lissage.jpg',
+        'dst_rel': 'prestations/lissage.webp',
+    },
+    'cat_crepus': {
+        'box': (700, 1260, 930, 1490),
+        'temp_name': 'cat_crepus.jpg',
+        'dst_rel': 'prestations/crepus.webp',
+    },
+    'cat_ondulations': {
+        'box': (970, 1260, 1200, 1490),
+        'temp_name': 'cat_ondulations.jpg',
+        'dst_rel': 'prestations/ondulations.webp',
+    },
+    # 4. Salon
+    'team_exterior': {
+        'box': (680, 2370, 1315, 3010),
+        'temp_name': 'team_exterior.jpg',
+        'dst_rel': 'salon/team.webp',
+    },
+    'salon_interior': {
+        'box': (450, 2740, 875, 3020),
+        'temp_name': 'salon_interior.jpg',
+        'dst_rel': 'salon/interior.webp',
+    },
+    # 5. Instagram
+    'insta_1': {
+        'box': (60, 3290, 455, 3700),
+        'temp_name': 'insta_1.jpg',
+        'dst_rel': 'instagram/insta-1.webp',
+    },
+    'insta_2': {
+        'box': (485, 3290, 880, 3700),
+        'temp_name': 'insta_2.jpg',
+        'dst_rel': 'instagram/insta-2.webp',
+    },
+    'insta_3': {
+        'box': (910, 3290, 1305, 3700),
+        'temp_name': 'insta_3.jpg',
+        'dst_rel': 'instagram/insta-3.webp',
+    },
+}
 
 def main():
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -84,49 +162,16 @@ def main():
     logo_dst = os.path.join(public_dir, 'logo.png')
     extract_logo(home_mockup, logo_dst)
 
-    # 2. Hero images
-    hero_mapping = {
-        'hero_left.jpg': 'hero/hero-left.webp',
-        'hero_center.jpg': 'hero/hero-center.webp',
-        'hero_right.jpg': 'hero/hero-right.webp',
-    }
-    for src_name, dst_rel in hero_mapping.items():
-        src = os.path.join(regions_dir, src_name)
-        dst = os.path.join(public_dir, dst_rel)
-        convert_region_to_webp(src, dst)
+    # Preload Home mockup if available for direct crop fallback
+    home_img = None
+    if os.path.exists(home_mockup):
+        home_img = Image.open(home_mockup)
 
-    # 3. Prestations
-    prestations_mapping = {
-        'cat_boucles.jpg': 'prestations/boucles.webp',
-        'cat_lissage.jpg': 'prestations/lissage.webp',
-        'cat_crepus.jpg': 'prestations/crepus.webp',
-        'cat_ondulations.jpg': 'prestations/ondulations.webp',
-    }
-    for src_name, dst_rel in prestations_mapping.items():
-        src = os.path.join(regions_dir, src_name)
-        dst = os.path.join(public_dir, dst_rel)
-        convert_region_to_webp(src, dst)
-
-    # 4. Salon
-    salon_mapping = {
-        'team_exterior.jpg': 'salon/team.webp',
-        'salon_interior.jpg': 'salon/interior.webp',
-    }
-    for src_name, dst_rel in salon_mapping.items():
-        src = os.path.join(regions_dir, src_name)
-        dst = os.path.join(public_dir, dst_rel)
-        convert_region_to_webp(src, dst)
-
-    # 5. Instagram
-    insta_mapping = {
-        'insta_1.jpg': 'instagram/insta-1.webp',
-        'insta_2.jpg': 'instagram/insta-2.webp',
-        'insta_3.jpg': 'instagram/insta-3.webp',
-    }
-    for src_name, dst_rel in insta_mapping.items():
-        src = os.path.join(regions_dir, src_name)
-        dst = os.path.join(public_dir, dst_rel)
-        convert_region_to_webp(src, dst)
+    # 2-5. Hero, Prestations, Salon, and Instagram images
+    for key, info in MOCKUP_REGIONS.items():
+        temp_src = os.path.join(regions_dir, info['temp_name']) if os.path.exists(regions_dir) else None
+        dst = os.path.join(public_dir, info['dst_rel'])
+        extract_region_to_webp(home_img, info['box'], dst, temp_src)
 
     # 6. Map mockup
     map_dst = os.path.join(public_dir, 'map-mockup.webp')

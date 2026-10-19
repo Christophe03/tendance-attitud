@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero-model.png',
+        url: '/images/hero/hero-center.webp',
         width: 1200,
         height: 630,
         alt: 'Salon Tendance Attitud Allauch',
@@ -127,13 +127,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable}`}>
-      <head>
+      <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         {children}
       </body>
     </html>

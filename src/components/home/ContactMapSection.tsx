@@ -1,20 +1,29 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, Calendar, Sparkles, ExternalLink } from 'lucide-react';
-import { SALON_INFO, isSalonOpenNow } from '../../data/salonInfo';
+import { SALON_INFO, isSalonOpenNow, getParisScheduleIndex } from '../../data/salonInfo';
 import Button from '../ui/Button';
 
 export default function ContactMapSection() {
-  const status = useMemo(() => isSalonOpenNow(SALON_INFO.openingHours), []);
+  const [currentDate, setCurrentDate] = useState<Date>(() => new Date());
 
-  // Determine current day of week (0 = Sunday, 1 = Monday, ...)
-  const todayScheduleIndex = useMemo(() => {
-    const day = new Date().getDay();
-    return day === 0 ? 6 : day - 1;
+  // 60-second client-side interval to refresh status if the tab stays open
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 60000);
+    return () => clearInterval(timer);
   }, []);
+
+  const status = useMemo(() => isSalonOpenNow(SALON_INFO.openingHours, currentDate), [currentDate]);
+
+  // Determine current day of week in Europe/Paris (0 = Lundi, ..., 6 = Dimanche)
+  const todayScheduleIndex = useMemo(() => {
+    return getParisScheduleIndex(currentDate);
+  }, [currentDate]);
 
   const googleMapsUrl = `https://maps.google.com/?q=${encodeURIComponent(SALON_INFO.address.full)}`;
 

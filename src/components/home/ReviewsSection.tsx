@@ -98,7 +98,7 @@ export default function ReviewsSection() {
 
         {/* Pill Card Carousel Area */}
         <div className="relative w-full min-h-[140px] sm:min-h-[120px] flex items-center justify-center">
-          <AnimatePresence custom={direction} initial={false}>
+          <AnimatePresence mode="wait" custom={direction} initial={false}>
             <motion.div
               key={currentReview.id}
               custom={direction}

@@ -7,7 +7,7 @@ interface ServiceItemProps {
 
 export default function ServiceItem({ service }: ServiceItemProps) {
   return (
-    <div className="py-4 border-b border-gray-100 last:border-b-0 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors hover:bg-gray-50/50 rounded-xl px-2 sm:px-3">
+    <div className="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors hover:bg-gray-50/50 rounded-xl px-2 sm:px-3">
       {/* Service Info */}
       <div className="flex-1 pr-0 sm:pr-4">
         <h4 className="text-sm sm:text-base font-semibold text-gray-900 tracking-tight leading-snug">

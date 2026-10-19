@@ -16,24 +16,24 @@ describe('Data Layer', () => {
   });
 
   it('correctly calculates live salon open status with isSalonOpenNow', () => {
-    // Monday at 10:00 -> Open (9h - 18h)
-    const mondayOpen = new Date('2026-10-19T10:00:00'); // Oct 19, 2026 is Monday
+    // Monday at 10:00 Paris time -> Open (9h - 18h)
+    const mondayOpen = new Date('2026-10-19T10:00:00+02:00'); // Oct 19, 2026 is Monday (CEST +02:00)
     expect(isSalonOpenNow(SALON_INFO.openingHours, mondayOpen).isOpen).toBe(true);
 
-    // Monday at 21:00 -> Closed
-    const mondayClosed = new Date('2026-10-19T21:00:00');
+    // Monday at 21:00 Paris time -> Closed
+    const mondayClosed = new Date('2026-10-19T21:00:00+02:00');
     expect(isSalonOpenNow(SALON_INFO.openingHours, mondayClosed).isOpen).toBe(false);
 
-    // Wednesday at 14:00 -> Closed (Wednesday is closed)
-    const wednesday = new Date('2026-10-21T14:00:00'); // Oct 21, 2026 is Wednesday
+    // Wednesday at 14:00 Paris time -> Closed (Wednesday is closed)
+    const wednesday = new Date('2026-10-21T14:00:00+02:00'); // Oct 21, 2026 is Wednesday
     expect(isSalonOpenNow(SALON_INFO.openingHours, wednesday).isOpen).toBe(false);
 
-    // Thursday at 20:15 -> Open (9h - 20h30)
-    const thursdayEvening = new Date('2026-10-22T20:15:00'); // Oct 22, 2026 is Thursday
+    // Thursday at 20:15 Paris time -> Open (9h - 20h30)
+    const thursdayEvening = new Date('2026-10-22T20:15:00+02:00'); // Oct 22, 2026 is Thursday
     expect(isSalonOpenNow(SALON_INFO.openingHours, thursdayEvening).isOpen).toBe(true);
 
-    // Thursday at 20:45 -> Closed
-    const thursdayLate = new Date('2026-10-22T20:45:00');
+    // Thursday at 20:45 Paris time -> Closed
+    const thursdayLate = new Date('2026-10-22T20:45:00+02:00');
     expect(isSalonOpenNow(SALON_INFO.openingHours, thursdayLate).isOpen).toBe(false);
   });
 

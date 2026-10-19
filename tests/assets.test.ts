@@ -17,6 +17,7 @@ describe('Optimized assets', () => {
     'public/images/instagram/insta-1.webp',
     'public/images/instagram/insta-2.webp',
     'public/images/instagram/insta-3.webp',
+    'public/images/map-mockup.webp',
   ];
 
   it.each(requiredImages)('file %s exists and has non-zero size', (relPath) => {

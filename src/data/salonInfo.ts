@@ -28,22 +28,69 @@ export const SALON_INFO: SalonInfo = {
 };
 
 /**
+ * Returns Paris local time parts (dayOfWeek, hour, minute) using Intl.DateTimeFormat
+ */
+export function getParisTime(date: Date = new Date()): { dayOfWeek: number; hour: number; minute: number } {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Paris',
+    weekday: 'short',
+    hour: 'numeric',
+    minute: 'numeric',
+    hourCycle: 'h23',
+  }).formatToParts(date);
+
+  const dayMap: Record<string, number> = {
+    Sun: 0,
+    Mon: 1,
+    Tue: 2,
+    Wed: 3,
+    Thu: 4,
+    Fri: 5,
+    Sat: 6,
+  };
+
+  let weekday = 'Mon';
+  let hour = 0;
+  let minute = 0;
+
+  for (const part of parts) {
+    if (part.type === 'weekday') weekday = part.value;
+    if (part.type === 'hour') hour = parseInt(part.value, 10);
+    if (part.type === 'minute') minute = parseInt(part.value, 10);
+  }
+
+  return {
+    dayOfWeek: dayMap[weekday] ?? 0,
+    hour,
+    minute,
+  };
+}
+
+/**
+ * Returns the current day index in the openingHours schedule (0 = LUNDI, ..., 6 = DIMANCHE) in Europe/Paris
+ */
+export function getParisScheduleIndex(date: Date = new Date()): number {
+  const { dayOfWeek } = getParisTime(date);
+  return dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+}
+
+/**
  * Returns whether the salon is currently open and next status string
  */
 export function isSalonOpenNow(
   schedule: DaySchedule[] = SALON_INFO.openingHours,
   date: Date = new Date()
 ): { isOpen: boolean; nextStatus: string } {
-  const dayOfWeek = date.getDay(); // 0 = Sunday, 1 = Monday, ...
+  const { dayOfWeek, hour, minute } = getParisTime(date);
   const scheduleIndex = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
   const todaySchedule = schedule[scheduleIndex];
 
-  const currentMinutes = date.getHours() * 60 + date.getMinutes();
+  const currentMinutes = hour * 60 + minute;
 
-  const formatTime = (hour?: number, min?: number) => {
-    if (hour === undefined) return '';
-    const m = (min ?? 0).toString().padStart(2, '0');
-    return `${hour.toString().padStart(2, '0')}h${m !== '00' ? m : '00'}`;
+  const formatTime = (h?: number, m?: number) => {
+    if (h === undefined) return '';
+    const minStr = (m ?? 0).toString().padStart(2, '0');
+    return `${h.toString().padStart(2, '0')}h${minStr !== '00' ? minStr : '00'}`;
   };
 
   if (!todaySchedule || todaySchedule.isClosed) {
