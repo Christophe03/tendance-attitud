@@ -21,7 +21,7 @@ export default function HeroSection() {
             className="group relative h-[360px] sm:h-[460px] md:h-[560px] lg:h-[620px] rounded-2xl sm:rounded-3xl overflow-hidden border border-gold-500/25 shadow-2xl shadow-black/70 bg-olive-900"
           >
             <Image
-              src="/images/hero/hero-left.webp"
+              src="/images/hero/hero-left-v2.webp"
               alt="Coiffure lissage et ondulations blondes - Salon Tendance Attitud"
               fill
               priority
@@ -40,7 +40,7 @@ export default function HeroSection() {
             className="group relative h-[360px] sm:h-[460px] md:h-[560px] lg:h-[620px] rounded-2xl sm:rounded-3xl overflow-hidden border border-gold-400/40 shadow-2xl shadow-black/80 bg-olive-900"
           >
             <Image
-              src="/images/hero/hero-center.webp"
+              src="/images/hero/hero-center-v2.webp"
               alt="Nathalie devant le salon de coiffure Tendance Attitud à Allauch"
               fill
               priority
@@ -76,7 +76,7 @@ export default function HeroSection() {
             className="group relative h-[360px] sm:h-[460px] md:h-[560px] lg:h-[620px] rounded-2xl sm:rounded-3xl overflow-hidden border border-gold-500/25 shadow-2xl shadow-black/70 bg-olive-900"
           >
             <Image
-              src="/images/hero/hero-right.webp"
+              src="/images/hero/hero-right-v2.webp"
               alt="Coiffure boucles volumineuses et naturelles - Salon Tendance Attitud"
               fill
               priority

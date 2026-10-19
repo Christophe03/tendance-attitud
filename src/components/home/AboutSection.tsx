@@ -58,7 +58,7 @@ export default function AboutSection() {
             {/* Main Team Photo */}
             <div className="relative ml-auto w-full sm:w-[85%] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden border border-gold-400/25 shadow-2xl shadow-black/80 bg-olive-900 group">
               <Image
-                src="/images/salon/team.webp"
+                src="/images/salon/team-v2.webp"
                 alt="L'équipe de coiffeuses du Salon Tendance Attitud à Allauch avec Nathalie"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 600px"
@@ -71,7 +71,7 @@ export default function AboutSection() {
             {/* Inset Overlapping Salon Interior Photo */}
             <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 w-[62%] sm:w-[56%] aspect-[16/11] rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-gold-400/50 shadow-[0_16px_40px_rgba(0,0,0,0.9)] bg-olive-900 z-10 transition-transform duration-300 hover:scale-105 group">
               <Image
-                src="/images/salon/interior.webp"
+                src="/images/salon/interior-v2.webp"
                 alt="Intérieur moderne du salon de coiffure Tendance Attitud à Allauch avec miroirs dorés"
                 fill
                 sizes="(max-width: 640px) 60vw, (max-width: 1024px) 45vw, 360px"

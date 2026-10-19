@@ -18,6 +18,18 @@ describe('Optimized assets', () => {
     'public/images/instagram/insta-2.webp',
     'public/images/instagram/insta-3.webp',
     'public/images/map-mockup.webp',
+    'public/images/hero/hero-left-v2.webp',
+    'public/images/hero/hero-center-v2.webp',
+    'public/images/hero/hero-right-v2.webp',
+    'public/images/prestations/boucles-v2.webp',
+    'public/images/prestations/lissage-v2.webp',
+    'public/images/prestations/crepus-v2.webp',
+    'public/images/prestations/ondulations-v2.webp',
+    'public/images/salon/team-v2.webp',
+    'public/images/salon/interior-v2.webp',
+    'public/images/instagram/insta-1-v2.webp',
+    'public/images/instagram/insta-2-v2.webp',
+    'public/images/instagram/insta-3-v2.webp',
   ];
 
   it.each(requiredImages)('file %s exists and has non-zero size', (relPath) => {

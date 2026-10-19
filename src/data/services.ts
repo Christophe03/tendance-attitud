@@ -5,7 +5,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'boucles',
     name: 'BOUCLES',
-    image: '/images/prestations/boucles.webp',
+    image: '/images/prestations/boucles-v2.webp',
     title: 'BOUCLES NATURELLES & DÉFINITION',
     description: "Sublimez vos boucles naturelles avec nos soins et coupes sur-mesure spécialement pensés pour révéler leur ressort, leur souplesse et leur brillance éclatante.",
     services: [
@@ -54,7 +54,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'lissage',
     name: 'LISSAGE',
-    image: '/images/prestations/lissage.webp',
+    image: '/images/prestations/lissage-v2.webp',
     title: 'LISSAGE BRÉSILIEN & AU TANIN',
     description: "Offrez à votre chevelure un lissage soyeux, durable et respectueux de la fibre capillaire avec nos protocoles experts sans formol.",
     services: [
@@ -95,7 +95,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'crepus',
     name: 'CRÉPUS',
-    image: '/images/prestations/crepus.webp',
+    image: '/images/prestations/crepus-v2.webp',
     title: 'CHEVEUX CRÉPUS & TEXTURÉS',
     description: "Des soins d'exception hydratants et nourrissants, adaptés à la délicatesse et à la richesse des cheveux texturés type 4.",
     services: [
@@ -136,7 +136,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'ondulations',
     name: 'ONDULATIONS',
-    image: '/images/prestations/ondulations.webp',
+    image: '/images/prestations/ondulations-v2.webp',
     title: 'ONDULATIONS & EFFET WAVY',
     description: "Des ondulations souples, lumineuses et pleines de mouvement pour un effet wavy naturel, glamour et sophistiqué.",
     services: [

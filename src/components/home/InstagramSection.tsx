@@ -15,19 +15,19 @@ interface InstagramPost {
 const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: 'post-1',
-    image: '/images/instagram/insta-1.webp',
+    image: '/images/instagram/insta-1-v2.webp',
     alt: 'Transformation capillaire boucles et texture naturelle - Tendance Attitud Allauch',
     caption: 'Sublimation des boucles naturelles & diagnostic personnalisé ✨',
   },
   {
     id: 'post-2',
-    image: '/images/instagram/insta-2.webp',
+    image: '/images/instagram/insta-2-v2.webp',
     alt: 'Soin profond Tokio Inkarami et lissage haute brillance - Tendance Attitud Allauch',
     caption: 'Éclat absolu et soin réparateur haute précision 💫',
   },
   {
     id: 'post-3',
-    image: '/images/instagram/insta-3.webp',
+    image: '/images/instagram/insta-3-v2.webp',
     alt: 'Coupe et mise en forme sur-mesure au salon Tendance Attitud',
     caption: 'Coiffage et révélation de matière au salon 💛',
   },

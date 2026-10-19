@@ -17,9 +17,9 @@ describe('InstagramSection Component', () => {
     const images = screen.getAllByRole('img');
     expect(images.length).toBe(3);
 
-    expect(images[0].getAttribute('src')).toContain('insta-1.webp');
-    expect(images[1].getAttribute('src')).toContain('insta-2.webp');
-    expect(images[2].getAttribute('src')).toContain('insta-3.webp');
+    expect(images[0].getAttribute('src')).toMatch(/insta-1(-v2)?\.webp/);
+    expect(images[1].getAttribute('src')).toMatch(/insta-2(-v2)?\.webp/);
+    expect(images[2].getAttribute('src')).toMatch(/insta-3(-v2)?\.webp/);
 
     // All links open in new tab securely
     const links = screen.getAllByRole('link');

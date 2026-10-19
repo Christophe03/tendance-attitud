@@ -16,8 +16,8 @@ describe('HeroSection Component', () => {
     const images = screen.getAllByRole('img');
     expect(images.length).toBeGreaterThanOrEqual(3);
     const srcs = images.map((img) => img.getAttribute('src'));
-    expect(srcs.some((s) => s?.includes('hero-left.webp'))).toBe(true);
-    expect(srcs.some((s) => s?.includes('hero-center.webp'))).toBe(true);
-    expect(srcs.some((s) => s?.includes('hero-right.webp'))).toBe(true);
+    expect(srcs.some((s) => s?.includes('hero-left'))).toBe(true);
+    expect(srcs.some((s) => s?.includes('hero-center'))).toBe(true);
+    expect(srcs.some((s) => s?.includes('hero-right'))).toBe(true);
   });
 });

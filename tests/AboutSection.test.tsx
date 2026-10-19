@@ -23,8 +23,8 @@ describe('AboutSection Component', () => {
 
     expect(teamImg).toBeInTheDocument();
     expect(interiorImg).toBeInTheDocument();
-    expect(teamImg.getAttribute('src')).toContain('team.webp');
-    expect(interiorImg.getAttribute('src')).toContain('interior.webp');
+    expect(teamImg.getAttribute('src')).toMatch(/team(-v2)?\.webp/);
+    expect(interiorImg.getAttribute('src')).toMatch(/interior(-v2)?\.webp/);
   });
 
   it('highlights salon expertise and values', () => {
