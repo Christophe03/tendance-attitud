@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SALON_INFO } from '../../data/salonInfo';
+import LetterReveal from '../ui/LetterReveal';
 
 interface InstagramPost {
   id: string;
@@ -75,7 +76,7 @@ export default function InstagramSection() {
           className="inline-block group focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-4 focus:ring-offset-olive-800 rounded-lg"
         >
           <h2 className="font-script text-4xl sm:text-5xl md:text-6xl text-gold-400 transition-transform duration-300 group-hover:scale-105 tracking-wide">
-            Rejoignez-nous sur @Tendanceattitud
+            <LetterReveal text="Rejoignez-nous sur @Tendanceattitud" stagger={0.035} />
           </h2>
         </a>
       </motion.div>

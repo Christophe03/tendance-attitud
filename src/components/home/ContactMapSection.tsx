@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Navigation, Calendar, Sparkles, ExternalLink } from 'lucide-react';
 import { SALON_INFO, isSalonOpenNow, getParisScheduleIndex } from '../../data/salonInfo';
 import Button from '../ui/Button';
+import LetterReveal from '../ui/LetterReveal';
 
 export default function ContactMapSection() {
   const [currentDate, setCurrentDate] = useState<Date>(() => new Date());
@@ -50,7 +51,7 @@ export default function ContactMapSection() {
 
             {/* Main Editorial Heading */}
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-gold-400 font-bold leading-tight tracking-tight mb-4">
-              Salon Tendance Attitud
+              <LetterReveal text="Salon Tendance Attitud" stagger={0.04} />
             </h2>
 
             <p className="text-sm sm:text-base text-[#F7F5EE]/80 leading-relaxed font-light mb-6">

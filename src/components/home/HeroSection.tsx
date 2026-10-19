@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import LetterReveal from '../ui/LetterReveal';
 
 export default function HeroSection() {
   return (
@@ -94,20 +95,28 @@ export default function HeroSection() {
             {/* Accessible screen-reader heading with high-value local SEO keywords */}
             <span className="sr-only">Tendance Attitud - Salon de Coiffure à Allauch : Du lisse aux Boucles</span>
 
-            {/* Visual stylized typography matching maquette Home.png */}
+            {/* Visual stylized typography matching maquette Home.png with handwriting letter-by-letter reveal */}
             <div aria-hidden="true" className="w-full select-none">
               {/* "Du" on upper left/center */}
               <div className="w-full flex items-center justify-start pl-4 sm:pl-10 md:pl-16 lg:pl-24 -mb-3 sm:-mb-6 md:-mb-10 lg:-mb-14">
-                <span className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-gold-400 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-                  Du
-                </span>
+                <LetterReveal
+                  text="Du"
+                  delay={0.2}
+                  stagger={0.08}
+                  inView={false}
+                  className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-gold-400 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                />
               </div>
 
               {/* "lisse aux Boucles" spanning across cards */}
               <div className="w-full text-center">
-                <span className="font-script text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-gold-400 tracking-tight sm:tracking-normal drop-shadow-[0_4px_22px_rgba(0,0,0,0.95)]">
-                  lisse aux Boucles
-                </span>
+                <LetterReveal
+                  text="lisse aux Boucles"
+                  delay={0.45}
+                  stagger={0.045}
+                  inView={false}
+                  className="font-script text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-gold-400 tracking-tight sm:tracking-normal drop-shadow-[0_4px_22px_rgba(0,0,0,0.95)]"
+                />
               </div>
             </div>
           </h1>

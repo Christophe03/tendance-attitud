@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SERVICE_CATEGORIES } from '../../data/services';
 import ServiceItem from './ServiceItem';
+import LetterReveal from '../ui/LetterReveal';
 
 export default function ServicesSection() {
   const [activeCategoryId, setActiveCategoryId] = useState<string>(
@@ -24,7 +25,7 @@ export default function ServicesSection() {
       {/* Calligraphy Header */}
       <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12 select-none">
         <h2 className="font-script text-4xl sm:text-6xl md:text-7xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight">
-          Nos prestations
+          <LetterReveal text="Nos prestations" stagger={0.045} />
         </h2>
       </div>
 

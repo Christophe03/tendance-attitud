@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { REVIEWS } from '../../data/reviews';
+import LetterReveal from '../ui/LetterReveal';
 
 const slideVariants = {
   enter: (direction: number) => ({
@@ -62,11 +63,10 @@ export default function ReviewsSection() {
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
     >
-      {/* Calligraphy Header */}
+      {/* Calligraphy Header with letter-by-letter handwriting reveal */}
       <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-10 select-none">
         <h2 className="font-script text-3xl sm:text-5xl md:text-6xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight sm:leading-snug">
-          <span>Vous nous faites</span>
-          <span className="block mt-0.5 sm:mt-1">confiance</span>
+          <LetterReveal text={"Vous nous faites\nconfiance"} stagger={0.045} />
         </h2>
 
         {/* 5 Gold Stars below heading matching Home.png */}

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import LetterReveal from '../ui/LetterReveal';
 
 export default function AboutSection() {
   return (
@@ -21,8 +22,7 @@ export default function AboutSection() {
         >
           {/* Gold Serif Heading */}
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-gold-400 font-bold leading-tight tracking-tight mb-6">
-            Le salon, notre <br className="hidden sm:inline" />
-            équipe
+            <LetterReveal text={"Le salon, notre\néquipe"} stagger={0.035} />
           </h2>
 
           {/* Description Copy */}
