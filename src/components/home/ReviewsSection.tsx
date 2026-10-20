@@ -77,7 +77,7 @@ export default function ReviewsSection() {
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className="w-4 h-4 sm:w-5 sm:h-5 fill-gold-400 text-gold-400"
+              className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FFE88B] text-[#FFE88B]"
               aria-hidden="true"
             />
           ))}
@@ -91,7 +91,7 @@ export default function ReviewsSection() {
           type="button"
           onClick={prevReview}
           aria-label="Avis précédent"
-          className="flex-shrink-0 p-2 sm:p-3 text-gold-400/90 hover:text-gold-300 hover:bg-gold-400/10 active:scale-95 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold-400/60 cursor-pointer"
+          className="flex-shrink-0 p-2 sm:p-3 text-[#FFE88B] hover:text-white hover:bg-[#FFE88B]/10 active:scale-95 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFE88B]/60 cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" />
         </button>
@@ -148,7 +148,7 @@ export default function ReviewsSection() {
           type="button"
           onClick={nextReview}
           aria-label="Avis suivant"
-          className="flex-shrink-0 p-2 sm:p-3 text-gold-400/90 hover:text-gold-300 hover:bg-gold-400/10 active:scale-95 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold-400/60 cursor-pointer"
+          className="flex-shrink-0 p-2 sm:p-3 text-[#FFE88B] hover:text-white hover:bg-[#FFE88B]/10 active:scale-95 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFE88B]/60 cursor-pointer"
         >
           <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" />
         </button>

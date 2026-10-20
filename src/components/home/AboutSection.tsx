@@ -21,15 +21,15 @@ export default function AboutSection() {
           className="lg:col-span-5 flex flex-col justify-center"
         >
           {/* Gold Serif Heading */}
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-gold-400 font-bold leading-tight tracking-tight mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-tight tracking-tight mb-6 drop-shadow-sm">
             <LetterReveal text={"Le salon, notre\néquipe"} stagger={0.035} />
           </h2>
 
           {/* Description Copy */}
-          <div className="space-y-4 text-sm sm:text-base text-[#F7F5EE]/85 leading-relaxed font-light">
+          <div className="space-y-4 text-sm sm:text-base lg:text-lg text-[#FFE88B] leading-relaxed font-normal">
             <p>
-              Fondé par <span className="text-gold-300 font-medium">Nathalie</span>, le salon{' '}
-              <strong className="font-semibold text-white">Tendance Attitud</strong> à Allauch est né
+              Fondé par <span className="text-white font-semibold">Nathalie</span>, le salon{' '}
+              <strong className="font-bold text-white">Tendance Attitud</strong> à Allauch est né
               d&apos;une passion : révéler la beauté singulière et l&apos;éclat naturel de chaque chevelure.
             </p>
             <p>
@@ -37,7 +37,7 @@ export default function AboutSection() {
               une atmosphère conviviale et soignée. Notre salon est spécialisé dans l&apos;accompagnement
               de toutes les textures capillaires : du lissage brésilien haute précision à la révélation des
               boucles naturelles, sans oublier les soins profonds d&apos;exception tels que le protocole{' '}
-              <span className="text-gold-300 font-medium">Tokio Inkarami</span>.
+              <span className="text-white font-semibold">Tokio Inkarami</span>.
             </p>
             <p>
               Nos valeurs reposent sur un diagnostic sur-mesure, des conseils personnalisés et

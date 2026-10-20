@@ -34,16 +34,16 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#11180E] text-[#F7F5EE] border-t border-[#E5C368]/20 relative">
+    <footer className="bg-[#1A2010] text-[#F7F5EE] border-t border-[#FFE88B]/20 relative">
       {/* Partners Section */}
       <div className="border-b border-[#23301F] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#182315] border border-[#E5C368]/30 text-[#E5C368] text-xs font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#182315] border border-[#FFE88B]/30 text-[#FFE88B] text-xs font-semibold tracking-wider uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Excellence & Soins d'exception</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-serif text-[#E5C368] mb-4">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#FFE88B] mb-4">
             Nos partenaires
           </h2>
           <p className="text-sm sm:text-base text-[#F7F5EE]/70 max-w-2xl mx-auto mb-10">
@@ -55,12 +55,12 @@ export default function Footer() {
             {PARTNERS.map((partner) => (
               <div
                 key={partner.id}
-                className="group p-4 rounded-2xl bg-[#182315] border border-[#23301F] hover:border-[#E5C368]/50 transition-all duration-300 flex flex-col items-center justify-center text-center hover:scale-105"
+                className="group p-4 rounded-2xl bg-[#182315] border border-[#23301F] hover:border-[#FFE88B]/50 transition-all duration-300 flex flex-col items-center justify-center text-center hover:scale-105"
               >
-                <div className="w-14 h-14 rounded-full bg-[#FDF8E8] text-[#11180E] flex items-center justify-center font-serif font-bold text-lg mb-2 shadow-sm group-hover:bg-[#E5C368] transition-colors">
+                <div className="w-14 h-14 rounded-full bg-[#FDF8E8] text-[#11180E] flex items-center justify-center font-serif font-bold text-lg mb-2 shadow-sm group-hover:bg-[#FFE88B] transition-colors">
                   {partner.name.charAt(0)}
                 </div>
-                <h3 className="font-semibold text-sm text-[#F7F5EE] group-hover:text-[#E5C368] transition-colors">
+                <h3 className="font-semibold text-sm text-[#F7F5EE] group-hover:text-[#FFE88B] transition-colors">
                   {partner.name}
                 </h3>
                 {partner.description && (
@@ -85,10 +85,10 @@ export default function Footer() {
                 alt="Logo Salon Tendance Attitud"
                 width={48}
                 height={48}
-                className="w-12 h-12 rounded-full border border-[#E5C368]/60 object-cover"
+                className="w-12 h-12 rounded-full border border-[#FFE88B]/60 object-cover"
               />
               <div>
-                <span className="font-serif font-bold text-lg text-[#E5C368] block">
+                <span className="font-serif font-bold text-lg text-[#FFE88B] block">
                   Tendance Attitud
                 </span>
                 <span className="text-xs text-[#F7F5EE]/70 tracking-widest uppercase">
@@ -103,22 +103,22 @@ export default function Footer() {
 
           {/* Col 2: Navigation */}
           <div>
-            <h4 className="font-semibold text-sm tracking-wider uppercase text-[#E5C368] mb-4">
+            <h4 className="font-semibold text-sm tracking-wider uppercase text-[#FFE88B] mb-4">
               Navigation
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#prestations" className="hover:text-[#E5C368] transition-colors">
+                <a href="#prestations" className="hover:text-[#FFE88B] transition-colors">
                   Nos prestations
                 </a>
               </li>
               <li>
-                <a href="#equipe" className="hover:text-[#E5C368] transition-colors">
+                <a href="#equipe" className="hover:text-[#FFE88B] transition-colors">
                   L'équipe & Le salon
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#E5C368] transition-colors">
+                <a href="#contact" className="hover:text-[#FFE88B] transition-colors">
                   Horaires & Accès
                 </a>
               </li>
@@ -127,7 +127,7 @@ export default function Footer() {
                   href={SALON_INFO.bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#E5C368] transition-colors font-medium text-[#E5C368]"
+                  className="hover:text-[#FFE88B] transition-colors font-medium text-[#FFE88B]"
                 >
                   Prendre rendez-vous (Planity)
                 </a>
@@ -137,30 +137,30 @@ export default function Footer() {
 
           {/* Col 3: Contact & Coordonnées */}
           <div>
-            <h4 className="font-semibold text-sm tracking-wider uppercase text-[#E5C368] mb-4">
+            <h4 className="font-semibold text-sm tracking-wider uppercase text-[#FFE88B] mb-4">
               Contact & Salon
             </h4>
             <div className="space-y-3 text-xs text-[#F7F5EE]/80">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#E5C368] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#FFE88B] flex-shrink-0 mt-0.5" />
                 <span>{SALON_INFO.address.full}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#E5C368] flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#FFE88B] flex-shrink-0" />
                 <a
                   href={`tel:${SALON_INFO.phoneRaw}`}
-                  className="hover:text-[#E5C368] transition-colors"
+                  className="hover:text-[#FFE88B] transition-colors"
                 >
                   {SALON_INFO.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <InstagramIcon className="w-4 h-4 text-[#E5C368] flex-shrink-0" />
+                <InstagramIcon className="w-4 h-4 text-[#FFE88B] flex-shrink-0" />
                 <a
                   href={SALON_INFO.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#E5C368] transition-colors"
+                  className="hover:text-[#FFE88B] transition-colors"
                 >
                   {SALON_INFO.instagram.handle}
                 </a>
@@ -171,7 +171,7 @@ export default function Footer() {
           {/* Col 4: Horaires succincts & Back to Top */}
           <div className="flex flex-col justify-between">
             <div>
-              <h4 className="font-semibold text-sm tracking-wider uppercase text-[#E5C368] mb-4">
+              <h4 className="font-semibold text-sm tracking-wider uppercase text-[#FFE88B] mb-4">
                 Horaires d'ouverture
               </h4>
               <p className="text-xs text-[#F7F5EE]/70 leading-relaxed mb-3">
@@ -184,7 +184,7 @@ export default function Footer() {
             </div>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#E5C368]/40 text-[#E5C368] text-xs font-semibold hover:bg-[#E5C368]/10 transition-colors w-fit mt-2"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-[#FFE88B]/40 text-[#FFE88B] text-xs font-semibold hover:bg-[#E5C368]/10 transition-colors w-fit mt-2"
               aria-label="Retour en haut de page"
             >
               <span>Haut de page</span>
@@ -199,7 +199,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link
               href="/mentions-legales"
-              className="hover:text-[#E5C368] transition-colors underline-offset-4 hover:underline"
+              className="hover:text-[#FFE88B] transition-colors underline-offset-4 hover:underline"
             >
               MENTIONS LÉGALES
             </Link>

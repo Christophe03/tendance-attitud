@@ -44,7 +44,7 @@ export default function ContactMapSection() {
         >
           <div>
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#182315] border border-gold-400/30 text-gold-300 text-xs font-semibold tracking-wider uppercase mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1E2513] border border-[#FFE88B]/30 text-gold-300 text-xs font-semibold tracking-wider uppercase mb-4">
               <Sparkles className="w-3.5 h-3.5 text-gold-400" />
               <span>Rendez-nous visite</span>
             </div>
@@ -60,7 +60,7 @@ export default function ContactMapSection() {
             </p>
 
             {/* Live Status Badge */}
-            <div className="mb-6 inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-[#182315] border border-gold-400/20 shadow-sm">
+            <div className="mb-6 inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-[#1E2513] border border-[#FFE88B]/20 shadow-sm">
               <span className="relative flex h-3 w-3">
                 {status.isOpen ? (
                   <>
@@ -86,16 +86,16 @@ export default function ContactMapSection() {
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-3 p-3 rounded-2xl bg-[#182315]/60 border border-[#23301F] hover:border-gold-400/40 transition-colors"
+                className="group flex items-start gap-3 p-3 rounded-2xl bg-[#1E2513]/60 border border-[#23301F] hover:border-[#FFE88B]/40 transition-colors"
               >
-                <div className="w-9 h-9 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition-colors">
+                <div className="w-9 h-9 rounded-xl bg-gold-400/10 border border-[#FFE88B]/30 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition-colors">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <span className="text-xs text-[#F7F5EE]/60 uppercase tracking-wider font-semibold block">
                     Adresse
                   </span>
-                  <span className="text-sm text-[#F7F5EE] group-hover:text-gold-300 transition-colors font-medium">
+                  <span className="text-sm text-white group-hover:text-[#FFE88B] transition-colors font-medium">
                     {SALON_INFO.address.full}
                   </span>
                 </div>
@@ -105,27 +105,27 @@ export default function ContactMapSection() {
               {/* Phone Click-to-call Link */}
               <a
                 href={`tel:${SALON_INFO.phoneRaw}`}
-                className="group flex items-center gap-3 p-3 rounded-2xl bg-[#182315]/60 border border-[#23301F] hover:border-gold-400/40 transition-colors"
+                className="group flex items-center gap-3 p-3 rounded-2xl bg-[#1E2513]/60 border border-[#23301F] hover:border-[#FFE88B]/40 transition-colors"
               >
-                <div className="w-9 h-9 rounded-xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition-colors">
+                <div className="w-9 h-9 rounded-xl bg-gold-400/10 border border-[#FFE88B]/30 flex items-center justify-center flex-shrink-0 text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <span className="text-xs text-[#F7F5EE]/60 uppercase tracking-wider font-semibold block">
                     Téléphone
                   </span>
-                  <span className="text-sm text-[#F7F5EE] group-hover:text-gold-300 transition-colors font-semibold tracking-wide">
+                  <span className="text-sm text-white group-hover:text-[#FFE88B] transition-colors font-semibold tracking-wide">
                     {SALON_INFO.phone}
                   </span>
                 </div>
-                <span className="text-xs text-gold-400 underline decoration-gold-400/40 group-hover:decoration-gold-400 transition-colors">
+                <span className="text-xs text-[#FFE88B] underline decoration-[#FFE88B]/40 group-hover:decoration-[#FFE88B] transition-colors">
                   Appeler
                 </span>
               </a>
             </div>
 
             {/* Opening Hours Table */}
-            <div className="rounded-3xl bg-[#182315] border border-gold-400/20 p-5 sm:p-6 shadow-xl">
+            <div className="rounded-3xl bg-[#1E2513] border border-[#FFE88B]/20 p-5 sm:p-6 shadow-xl">
               <div className="flex items-center gap-2 text-gold-400 mb-4 pb-3 border-b border-[#23301F]">
                 <Clock className="w-4 h-4" />
                 <h3 className="font-semibold text-xs sm:text-sm uppercase tracking-wider text-[#F7F5EE]">
@@ -133,23 +133,27 @@ export default function ContactMapSection() {
                 </h3>
               </div>
 
-              <ul className="space-y-2 text-xs sm:text-sm">
+              <ul className="space-y-2.5 text-xs sm:text-sm font-medium tracking-wide">
                 {SALON_INFO.openingHours.map((schedule, idx) => {
                   const isToday = idx === todayScheduleIndex;
+                  // In Canva: Mercredi, Jeudi, Vendredi, Samedi are highlighted gold (#FFE88B), Lundi/Mardi/Dimanche are white
+                  const isCanvaGold = ['MERCREDI', 'JEUDI', 'VENDREDI', 'SAMEDI'].includes(schedule.day.toUpperCase());
+                  const textColor = isCanvaGold ? 'text-[#FFE88B]' : 'text-white';
+
                   return (
                     <li
                       key={schedule.day}
-                      className={`flex items-center justify-between px-3 py-2 rounded-xl transition-colors ${
+                      className={`flex items-center justify-between px-3.5 py-2 rounded-xl transition-colors ${
                         isToday
-                          ? 'bg-gold-400/15 border border-gold-400/40 text-gold-300 font-semibold'
-                          : 'text-[#F7F5EE]/80 hover:bg-[#23301F]/40'
-                      }`}
+                          ? 'bg-[#FFE88B]/15 border border-[#FFE88B]/50 font-bold shadow-sm'
+                          : 'hover:bg-[#2E361E]/50'
+                      } ${textColor}`}
                     >
-                      <span>
+                      <span className="tracking-wider">
                         {schedule.day}: {schedule.hours}
                       </span>
                       {isToday && (
-                        <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gold-400/25 text-gold-300 border border-gold-400/40">
+                        <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#FFE88B]/20 text-[#FFE88B] border border-[#FFE88B]/40">
                           Aujourd'hui
                         </span>
                       )}
@@ -184,7 +188,7 @@ export default function ContactMapSection() {
           transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
           className="lg:col-span-6 flex flex-col justify-center"
         >
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:h-full lg:min-h-[520px] rounded-3xl overflow-hidden border border-gold-400/30 shadow-2xl bg-[#182315] group">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:h-full lg:min-h-[520px] rounded-3xl overflow-hidden border border-[#FFE88B]/30 shadow-2xl bg-[#1E2513] group">
             {/* Interactive Google Map embed with Allauch Village Tendance Attitud */}
             <iframe
               title="Carte de localisation - Allauch Village Tendance Attitud, 44 avenue Salvador Allende"
@@ -202,7 +206,7 @@ export default function ContactMapSection() {
             </div>
 
             {/* Bottom Inset Overlay Card with GPS Button */}
-            <div className="absolute bottom-4 inset-x-4 sm:bottom-6 sm:inset-x-6 z-10 p-4 sm:p-5 rounded-2xl bg-[#11180E]/95 border border-gold-400/40 shadow-2xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 pointer-events-auto">
+            <div className="absolute bottom-4 inset-x-4 sm:bottom-6 sm:inset-x-6 z-10 p-4 sm:p-5 rounded-2xl bg-[#11180E]/95 border border-[#FFE88B]/40 shadow-2xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 pointer-events-auto">
               <div className="min-w-0">
                 <span className="font-serif font-bold text-sm sm:text-base text-gold-300 block truncate">
                   Tendance Attitud

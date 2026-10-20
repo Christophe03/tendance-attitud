@@ -55,7 +55,7 @@ export default function HeroSection() {
             <div className="absolute top-3 sm:top-5 md:top-6 left-1/2 -translate-x-1/2 z-20 pointer-events-auto">
               <div className="relative inline-flex items-center justify-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-gold-400/80 bg-olive-900/85 backdrop-blur-md shadow-[0_0_15px_rgba(229,195,104,0.35)]">
                 <div className="absolute inset-0.5 rounded-full border border-gold-400/30 pointer-events-none" />
-                <span className="text-[10px] sm:text-xs md:text-sm font-serif tracking-[0.25em] text-gold-300 uppercase font-semibold">
+                <span className="text-[10px] sm:text-xs md:text-sm font-serif tracking-[0.25em] text-[#FFE88B] uppercase font-bold">
                   Allauch
                 </span>
               </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
             {/* Subtitle below: Tous les cheveux méritent d'être sublimés */}
             <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 w-[92%] text-center pointer-events-none">
-              <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-serif text-gold-200/95 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] leading-snug">
+              <p className="text-xs sm:text-sm md:text-base font-medium text-[#FFE88B] tracking-wider drop-shadow-[0_2px_12px_rgba(0,0,0,0.98)] leading-snug">
                 {"Tous les cheveux méritent d'être sublimés"}
               </p>
             </div>

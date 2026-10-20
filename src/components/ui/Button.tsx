@@ -22,11 +22,11 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center font-bold tracking-wide transition-all duration-200 rounded-full cursor-pointer text-center';
+    'inline-flex items-center justify-center font-bold tracking-wide transition-all duration-200 cursor-pointer text-center';
   const variants = {
-    gold: 'bg-[#B3984C] hover:bg-[#C7A24B] text-black shadow-md hover:shadow-lg active:scale-95 border border-[#B3984C]',
-    dark: 'bg-[#182315] hover:bg-[#253621] text-white active:scale-95 border border-[#253621]',
-    outline: 'border border-[#E5C368] text-[#E5C368] hover:bg-[#E5C368]/10 active:scale-95',
+    gold: 'bg-[#4D3F08] hover:bg-[#604E0A] text-[#FFE88B] shadow-sm active:scale-95 border border-[#CCB765] rounded-lg',
+    dark: 'bg-[#242B17] hover:bg-[#343D21] text-white active:scale-95 border border-[#343D21] rounded-full',
+    outline: 'border border-[#FFE88B] text-[#FFE88B] hover:bg-[#FFE88B]/10 active:scale-95 rounded-lg',
   };
   const sizes = {
     sm: 'text-xs px-4 py-1.5',

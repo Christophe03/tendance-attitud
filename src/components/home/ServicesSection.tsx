@@ -47,8 +47,8 @@ export default function ServicesSection() {
               <div
                 className={`relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden transition-all duration-300 ${
                   isActive
-                    ? 'ring-4 ring-gold-400 ring-offset-2 ring-offset-[#0d140b] shadow-[0_0_20px_rgba(212,175,55,0.4)] scale-105'
-                    : 'ring-2 ring-gold-400/30 opacity-70 group-hover:opacity-100 group-hover:ring-gold-400/70'
+                    ? 'ring-4 ring-[#FFE88B] ring-offset-2 ring-offset-[#242B17] shadow-[0_0_20px_rgba(255,232,139,0.35)] scale-105'
+                    : 'ring-2 ring-[#FFE88B]/40 opacity-80 group-hover:opacity-100 group-hover:ring-[#FFE88B]'
                 }`}
               >
                 <Image
@@ -64,8 +64,8 @@ export default function ServicesSection() {
               <span
                 className={`mt-2.5 sm:mt-3 text-xs sm:text-sm tracking-widest uppercase font-bold transition-colors duration-200 ${
                   isActive
-                    ? 'text-gold-400 font-extrabold'
-                    : 'text-gold-200/70 group-hover:text-gold-300'
+                    ? 'text-[#FFE88B] font-extrabold scale-105'
+                    : 'text-[#FFE88B]/70 group-hover:text-[#FFE88B]'
                 }`}
               >
                 {category.name}
@@ -77,7 +77,7 @@ export default function ServicesSection() {
 
       {/* Subtitle */}
       <div className="text-center mb-8 sm:mb-10">
-        <p className="text-xs sm:text-sm md:text-base italic text-gold-200/90 font-light tracking-wide">
+        <p className="text-sm sm:text-base md:text-lg font-medium text-white tracking-wider drop-shadow-sm">
           Balayage, soin Tokio, coupes, tresses
         </p>
       </div>
