@@ -1,6 +1,29 @@
 import type { Metadata } from 'next';
 import { Alex_Brush, Playfair_Display, Montserrat } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
+
+const bickhamScript = localFont({
+  src: [
+    {
+      path: '../../public/fonts/bickham-script-pro-regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/bickham-script-pro-semibold.woff',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/bickham-script-pro-bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-bickham',
+  display: 'swap',
+});
 
 const alexBrush = Alex_Brush({
   weight: ['400'],
@@ -295,7 +318,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable}`}>
+    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable}`}>
       <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"

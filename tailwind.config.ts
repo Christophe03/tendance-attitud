@@ -25,7 +25,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        script: ['var(--font-script)', 'cursive'],
+        bickham: ['"Bickham Script Pro"', 'var(--font-bickham)', 'var(--font-script)', 'cursive'],
+        script: ['"Bickham Script Pro"', 'var(--font-bickham)', 'var(--font-script)', 'cursive'],
         serif: ['var(--font-serif)', 'serif'],
         sans: ['var(--font-sans)', 'sans-serif'],
       },

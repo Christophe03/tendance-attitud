@@ -98,13 +98,13 @@ export default function HeroSection() {
             {/* Visual stylized typography matching maquette Home.png with handwriting letter-by-letter reveal */}
             <div aria-hidden="true" className="w-full select-none">
               {/* "Du" on upper left/center */}
-              <div className="w-full flex items-center justify-start pl-4 sm:pl-10 md:pl-16 lg:pl-24 -mb-3 sm:-mb-6 md:-mb-10 lg:-mb-14">
+              <div className="w-full flex items-center justify-start pl-4 sm:pl-8 md:pl-14 lg:pl-20 -mb-4 sm:-mb-8 md:-mb-12 lg:-mb-16">
                 <LetterReveal
                   text="Du"
                   delay={0.2}
                   stagger={0.08}
                   inView={false}
-                  className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-gold-400 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                  className="font-bickham text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] text-gold-400 drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)] leading-none"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export default function HeroSection() {
                   delay={0.45}
                   stagger={0.045}
                   inView={false}
-                  className="font-script text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-gold-400 tracking-tight sm:tracking-normal drop-shadow-[0_4px_22px_rgba(0,0,0,0.95)]"
+                  className="font-bickham text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10.5rem] 2xl:text-[12.5rem] text-gold-400 tracking-tight sm:tracking-normal drop-shadow-[0_4px_26px_rgba(0,0,0,0.95)] leading-tight"
                 />
               </div>
             </div>
