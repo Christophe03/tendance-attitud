@@ -16,10 +16,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#242B17]/95 backdrop-blur-md border-b border-[#FFE88B]/20 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-20">
           {/* Desktop Left Nav */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
             <a
               href="#prestations"
               className="text-base font-semibold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
@@ -34,21 +34,23 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Center Logo */}
-          <div className="flex-shrink-0 flex items-center justify-center">
+          {/* Center Logo - enlarged & overlapping center hero card */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-2 sm:top-2 md:top-2 z-50">
             <Link
               href="/"
-              className="group relative flex items-center justify-center p-0.5 rounded-full border-2 border-[#FFE88B]/60 hover:border-[#FFE88B] shadow-md transition-all duration-300 hover:scale-105"
+              className="group relative flex items-center justify-center rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-105"
               aria-label="Retour à l'accueil Salon Tendance Attitud"
             >
-              <Image
-                src="/images/logo.png"
-                alt="Logo Salon Tendance Attitud Allauch"
-                width={64}
-                height={64}
-                className="w-13 h-13 md:w-16 md:h-16 rounded-full object-cover"
-                priority
-              />
+              <div className="w-22 h-22 sm:w-26 sm:h-26 md:w-32 md:h-32 rounded-full overflow-hidden p-1.5 sm:p-2 bg-white flex items-center justify-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo Salon Tendance Attitud Allauch"
+                  width={140}
+                  height={140}
+                  className="w-full h-full object-contain"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
@@ -73,7 +75,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Phone & Hamburger */}
-          <div className="flex items-center space-x-3 md:hidden">
+          <div className="flex items-center space-x-3 md:hidden ml-auto">
             <a
               href={`tel:${SALON_INFO.phoneRaw}`}
               className="p-2.5 text-[#FFE88B] hover:text-white rounded-full border border-[#FFE88B]/40 hover:border-[#FFE88B] transition-colors"

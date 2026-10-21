@@ -13,7 +13,7 @@ export default function HeroSection() {
     >
       <div className="relative mx-auto max-w-5xl">
         {/* Triptych Grid: 3 vertical cards */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 items-stretch">
+        <div className="grid grid-cols-3 gap-1.5 sm:gap-2 md:gap-2.5 items-stretch">
           {/* Card 1: Left - Smooth blonde hair waves */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/40 pointer-events-none" />
 
             {/* Circular badge on center photo: Allauch */}
-            <div className="absolute top-3 sm:top-5 md:top-6 left-1/2 -translate-x-1/2 z-20 pointer-events-auto">
+            <div className="absolute top-12 sm:top-14 md:top-16 left-1/2 -translate-x-1/2 z-20 pointer-events-auto">
               <div className="relative inline-flex items-center justify-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-gold-400/80 bg-olive-900/85 backdrop-blur-md shadow-[0_0_15px_rgba(229,195,104,0.35)]">
                 <div className="absolute inset-0.5 rounded-full border border-gold-400/30 pointer-events-none" />
                 <span className="text-[10px] sm:text-xs md:text-sm font-serif tracking-[0.25em] text-[#FFE88B] uppercase font-bold">
