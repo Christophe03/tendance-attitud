@@ -85,6 +85,33 @@ const timesCond = localFont({
   display: 'swap',
 });
 
+const aileron = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Aileron-SemiBold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Aileron-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Aileron-Heavy.otf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Aileron-Black.otf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-aileron',
+  display: 'swap',
+});
+
 const alexBrush = Alex_Brush({
   weight: ['400'],
   subsets: ['latin'],

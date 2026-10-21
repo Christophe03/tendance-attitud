@@ -25,6 +25,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        aileron: ['"Aileron"', 'var(--font-aileron)', 'var(--font-sans)', 'sans-serif'],
         'times-cond': ['"Times NR MT Pro"', 'var(--font-times-cond)', '"Times New Roman"', 'serif'],
         luxurious: ['"Luxurious Script"', 'var(--font-luxurious)', 'cursive'],
         kaushan: ['"Kaushan Script"', 'var(--font-kaushan)', 'cursive'],
