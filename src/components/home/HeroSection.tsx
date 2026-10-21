@@ -98,8 +98,8 @@ export default function HeroSection() {
                 />
 
                 {/* Oval badge "Allauch" matching Canva mockup */}
-                <div className="inline-flex items-center justify-center px-2.5 py-0.5 sm:px-3.5 sm:py-1 md:px-5 md:py-1.5 rounded-full border-[1.5px] sm:border-2 border-[#FFE88B] bg-transparent backdrop-blur-[2px] shadow-[0_2px_12px_rgba(0,0,0,0.6)] translate-y-2 sm:translate-y-3 md:translate-y-4">
-                  <span className="font-times-cond font-bold text-xs sm:text-base md:text-xl lg:text-2xl text-[#FFE88B] tracking-[-0.03em] leading-none select-none">
+                <div className="inline-flex items-center justify-center px-3.5 py-1 sm:px-5 sm:py-1.5 md:px-6 md:py-2 lg:px-7 lg:py-2.5 rounded-full border-[1.5px] sm:border-2 md:border-[2.5px] border-[#FFE88B] bg-transparent backdrop-blur-[2px] shadow-[0_2px_12px_rgba(0,0,0,0.6)] translate-y-1.5 sm:translate-y-2 md:translate-y-3">
+                  <span className="font-times-cond font-bold text-sm sm:text-lg md:text-2xl lg:text-3xl text-[#FFE88B] tracking-[-0.03em] leading-none select-none">
                     Allauch
                   </span>
                 </div>
