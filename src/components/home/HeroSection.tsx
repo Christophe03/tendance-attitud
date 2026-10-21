@@ -83,7 +83,7 @@ export default function HeroSection() {
         </div>
 
         {/* Subtitle spanning across the cards matching Canva mockup */}
-        <div className="absolute bottom-3 sm:bottom-5 md:bottom-7 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 w-full px-2 sm:px-4 text-center pointer-events-none">
+        <div className="absolute bottom-6 sm:bottom-10 md:bottom-14 lg:bottom-16 left-1/2 -translate-x-1/2 z-20 w-full px-2 sm:px-4 text-center pointer-events-none">
           <p className="font-aileron font-extrabold text-xs sm:text-base md:text-xl lg:text-2xl text-[#FFE88B] tracking-[-0.04em] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] leading-tight select-none">
             {"Tous les cheveux méritent d'être sublimés"}
           </p>
