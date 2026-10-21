@@ -26,7 +26,7 @@ export default function AboutSection() {
           </h2>
 
           {/* Description Copy */}
-          <div className="space-y-4 text-sm sm:text-base lg:text-lg text-[#FFE88B] leading-relaxed font-normal">
+          <div className="space-y-4 text-sm sm:text-base lg:text-lg text-white leading-relaxed font-normal">
             <p>
               Fondé par <span className="text-white font-semibold">Nathalie</span>, le salon{' '}
               <strong className="font-bold text-white">Tendance Attitud</strong> à Allauch est né
