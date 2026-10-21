@@ -15,7 +15,7 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#242B17]/95 backdrop-blur-md border-b border-[#FFE88B]/20 transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-[#242B17]/95 backdrop-blur-md transition-all duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-20">
           {/* Desktop Left Nav */}
@@ -104,7 +104,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-[#242B17]/98 border-b border-[#FFE88B]/20 shadow-xl"
+            className="md:hidden overflow-hidden bg-[#242B17]/98 shadow-xl"
           >
             <div className="px-5 pt-3 pb-6 space-y-4">
               <nav className="flex flex-col space-y-3 pt-2">
