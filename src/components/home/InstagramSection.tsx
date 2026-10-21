@@ -75,7 +75,7 @@ export default function InstagramSection() {
           rel="noopener noreferrer"
           className="inline-block group focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-4 focus:ring-offset-olive-800 rounded-lg"
         >
-          <h2 className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold-400 transition-transform duration-300 group-hover:scale-105 tracking-wide leading-tight sm:leading-snug py-2">
+          <h2 className="font-right-attitude text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold-400 transition-transform duration-300 group-hover:scale-105 tracking-wide leading-tight sm:leading-snug py-2">
             <LetterReveal text="Rejoignez-nous sur @Tendanceattitud" stagger={0.035} />
           </h2>
         </a>

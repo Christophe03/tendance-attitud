@@ -25,6 +25,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        'right-attitude': ['"The Right Attitude"', 'var(--font-right-attitude)', '"Bickham Script Pro"', 'cursive'],
         bickham: ['"Bickham Script Pro"', 'var(--font-bickham)', 'var(--font-script)', 'cursive'],
         script: ['"Bickham Script Pro"', 'var(--font-bickham)', 'var(--font-script)', 'cursive'],
         serif: ['var(--font-serif)', 'serif'],

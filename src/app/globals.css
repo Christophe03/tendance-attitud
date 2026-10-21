@@ -39,6 +39,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'The Right Attitude';
+  src: url('/fonts/TheRightAttitude.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

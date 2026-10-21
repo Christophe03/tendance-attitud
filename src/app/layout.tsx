@@ -25,6 +25,18 @@ const bickhamScript = localFont({
   display: 'swap',
 });
 
+const rightAttitude = localFont({
+  src: [
+    {
+      path: '../../public/fonts/TheRightAttitude.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-right-attitude',
+  display: 'swap',
+});
+
 const alexBrush = Alex_Brush({
   weight: ['400'],
   subsets: ['latin'],
@@ -318,7 +330,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable}`}>
+    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable}`}>
       <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"
