@@ -21,7 +21,7 @@ export default function AboutSection() {
           className="lg:col-span-5 flex flex-col justify-center"
         >
           {/* Gold Serif Heading */}
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-tight tracking-tight mb-6 drop-shadow-sm">
+          <h2 className="font-times-cond text-4xl sm:text-5xl lg:text-6xl text-[#FFE88B] font-bold leading-[0.98] tracking-[-0.04em] mb-6 drop-shadow-sm">
             <LetterReveal text={"Le salon, notre\néquipe"} stagger={0.035} />
           </h2>
 

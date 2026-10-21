@@ -73,6 +73,18 @@ const luxuriousScript = localFont({
   display: 'swap',
 });
 
+const timesCond = localFont({
+  src: [
+    {
+      path: '../../public/fonts/TimesNRMTPro-BoldCond.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-times-cond',
+  display: 'swap',
+});
+
 const alexBrush = Alex_Brush({
   weight: ['400'],
   subsets: ['latin'],
@@ -366,7 +378,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable} ${yellowtail.variable} ${kaushanScript.variable} ${luxuriousScript.variable}`}>
+    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable} ${yellowtail.variable} ${kaushanScript.variable} ${luxuriousScript.variable} ${timesCond.variable}`}>
       <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"
