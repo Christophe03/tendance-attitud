@@ -63,25 +63,36 @@ export default function ReviewsSection() {
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
     >
-      {/* Calligraphy Header with letter-by-letter handwriting reveal */}
-      <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-10 select-none">
-        <h2 className="font-script text-3xl sm:text-5xl md:text-6xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight sm:leading-snug">
-          <LetterReveal text={"Vous nous faites\nconfiance"} stagger={0.045} />
-        </h2>
+      {/* Calligraphy & Editorial Header matching Canva mockup */}
+      <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12 select-none px-2">
+        <h2 className="relative inline-flex flex-col sm:flex-row items-center sm:items-end justify-center gap-1 sm:gap-3 md:gap-4">
+          {/* Script: Vous nous faites */}
+          <span className="font-luxurious text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-none py-1 [text-shadow:_0_0_1px_rgba(255,232,139,0.8)]">
+            <LetterReveal text="Vous nous faites" stagger={0.04} />
+          </span>
 
-        {/* 5 Gold Stars below heading matching Home.png */}
-        <div
-          className="flex items-center justify-center gap-1.5 mt-3 text-gold-400"
-          aria-label="Évaluation de 5 étoiles sur 5"
-        >
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FFE88B] text-[#FFE88B]"
-              aria-hidden="true"
-            />
-          ))}
-        </div>
+          {/* Right lockup: 4 Stars stacked directly above 'confiance' */}
+          <div className="inline-flex flex-col items-center sm:items-start justify-end pb-1">
+            {/* 4 Gold Stars matching Canva mockup */}
+            <div
+              className="flex items-center justify-between w-full max-w-[120px] sm:max-w-[150px] md:max-w-[170px] gap-1 sm:gap-1.5 mb-1 text-gold-400"
+              aria-label="Évaluation de 4 étoiles sur 5"
+            >
+              {[...Array(4)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 fill-[#FFE88B] text-[#FFE88B]"
+                  aria-hidden="true"
+                />
+              ))}
+            </div>
+
+            {/* Editorial Serif: confiance */}
+            <span className="font-times-cond text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gold-400 font-bold tracking-[-0.04em] leading-none lowercase">
+              <LetterReveal text="confiance" stagger={0.04} />
+            </span>
+          </div>
+        </h2>
       </div>
 
       {/* Reviews Carousel Wrapper */}
