@@ -25,6 +25,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        kaushan: ['"Kaushan Script"', 'var(--font-kaushan)', 'cursive'],
         yellowtail: ['"Yellowtail"', 'var(--font-yellowtail)', 'cursive'],
         'right-attitude': ['"The Right Attitude"', 'var(--font-right-attitude)', '"Bickham Script Pro"', 'cursive'],
         bickham: ['"Bickham Script Pro"', 'var(--font-bickham)', 'var(--font-script)', 'cursive'],

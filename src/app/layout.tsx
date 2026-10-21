@@ -49,6 +49,18 @@ const yellowtail = localFont({
   display: 'swap',
 });
 
+const kaushanScript = localFont({
+  src: [
+    {
+      path: '../../public/fonts/KaushanScript-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-kaushan',
+  display: 'swap',
+});
+
 const alexBrush = Alex_Brush({
   weight: ['400'],
   subsets: ['latin'],
@@ -342,7 +354,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable} ${yellowtail.variable}`}>
+    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable} ${yellowtail.variable} ${kaushanScript.variable}`}>
       <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"
