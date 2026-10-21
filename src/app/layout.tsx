@@ -37,6 +37,18 @@ const rightAttitude = localFont({
   display: 'swap',
 });
 
+const yellowtail = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Yellowtail-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-yellowtail',
+  display: 'swap',
+});
+
 const alexBrush = Alex_Brush({
   weight: ['400'],
   subsets: ['latin'],
@@ -330,7 +342,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable}`}>
+    <html lang="fr" className={`${bickhamScript.variable} ${alexBrush.variable} ${playfairDisplay.variable} ${montserrat.variable} ${rightAttitude.variable} ${yellowtail.variable}`}>
       <body className="antialiased bg-olive-800 text-[#F7F5EE] font-sans">
         <script
           type="application/ld+json"
