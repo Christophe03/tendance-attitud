@@ -63,6 +63,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Luxurious Script';
+  src: url('/fonts/LuxuriousScript-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
