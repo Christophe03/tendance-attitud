@@ -54,7 +54,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'lissage',
     name: 'LISSAGE',
-    image: '/images/prestations/lissage-dos.webp',
+    image: '/images/prestations/lissage-39.webp',
     title: 'LISSAGE BRÉSILIEN & AU TANIN',
     description: "Offrez à votre chevelure un lissage soyeux, durable et respectueux de la fibre capillaire avec nos protocoles experts sans formol.",
     services: [
