@@ -68,9 +68,9 @@ export default function Header() {
               target="_blank"
               variant="gold"
               size="md"
-              className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg text-base font-bold tracking-wider"
+              className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg"
             >
-              PRENDRE RDV
+              <span className="text-lg font-bold tracking-wider">PRENDRE RDV</span>
             </Button>
           </div>
 
@@ -145,10 +145,10 @@ export default function Header() {
                   target="_blank"
                   variant="gold"
                   size="md"
-                  className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg text-base font-bold"
+                  className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span>PRENDRE RDV</span>
+                  <span className="text-lg font-bold tracking-wider">PRENDRE RDV</span>
                 </Button>
               </div>
             </div>
