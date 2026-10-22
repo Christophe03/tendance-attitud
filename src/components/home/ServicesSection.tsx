@@ -24,7 +24,7 @@ export default function ServicesSection() {
     >
       {/* Calligraphy Header */}
       <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12 select-none">
-        <h2 className="font-luxurious text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight sm:leading-snug py-2 [text-shadow:_0_0_1px_rgba(255,232,139,0.8)]">
+        <h2 className="font-luxurious text-7xl sm:text-8xl md:text-9xl lg:text-[9.5rem] text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight sm:leading-snug py-2 [text-shadow:_0_0_1px_rgba(255,232,139,0.8)]">
           <LetterReveal text="Nos prestations" stagger={0.045} />
         </h2>
       </div>
