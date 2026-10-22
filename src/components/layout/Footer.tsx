@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ArrowUp, MapPin, Phone, Sparkles } from 'lucide-react';
 import { PARTNERS } from '../../data/partners';
 import { SALON_INFO } from '../../data/salonInfo';
+import LetterReveal from '../ui/LetterReveal';
 
 function InstagramIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -43,8 +44,8 @@ export default function Footer() {
             <span>Excellence & Soins d'exception</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#FFE88B] mb-4">
-            Nos partenaires
+          <h2 className="font-luxurious text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-tight sm:leading-snug py-2 [text-shadow:_0_0_1px_rgba(255,232,139,0.8)] mb-4">
+            <LetterReveal text="Nos partenaires" stagger={0.045} />
           </h2>
           <p className="text-sm sm:text-base text-[#F7F5EE]/70 max-w-2xl mx-auto mb-10">
             Nous sélectionnons les plus grandes maisons professionnelles pour sublimer et protéger durablement vos cheveux.
