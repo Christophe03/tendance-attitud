@@ -67,8 +67,8 @@ export default function Header() {
               href={SALON_INFO.bookingUrl}
               target="_blank"
               variant="gold"
-              size="lg"
-              className="shadow-sm hover:shadow-md px-7 py-2.5 rounded-lg !text-lg font-black tracking-wider"
+              size="md"
+              className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg text-base font-bold tracking-wider"
             >
               PRENDRE RDV
             </Button>
@@ -144,8 +144,8 @@ export default function Header() {
                   href={SALON_INFO.bookingUrl}
                   target="_blank"
                   variant="gold"
-                  size="lg"
-                  className="w-full flex items-center justify-center gap-2 py-3.5 shadow-md rounded-lg !text-lg font-black tracking-wider"
+                  size="md"
+                  className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg text-base font-bold"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>PRENDRE RDV</span>
