@@ -70,7 +70,7 @@ export default function Header() {
               size="md"
               className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg"
             >
-              <span className="text-lg font-bold tracking-wider">PRENDRE RDV</span>
+              <span className="text-base font-bold tracking-wider">PRENDRE RDV</span>
             </Button>
           </div>
 
@@ -148,7 +148,7 @@ export default function Header() {
                   className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg"
                 >
                   <Calendar className="w-4 h-4" />
-                  <span className="text-lg font-bold tracking-wider">PRENDRE RDV</span>
+                  <span className="text-base font-bold tracking-wider">PRENDRE RDV</span>
                 </Button>
               </div>
             </div>
