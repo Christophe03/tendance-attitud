@@ -30,6 +30,7 @@ describe('Optimized assets', () => {
     'public/images/instagram/insta-1-v2.webp',
     'public/images/instagram/insta-2-v2.webp',
     'public/images/instagram/insta-3-v2.webp',
+    'public/images/vous-nous-faites-confiance@2x.webp',
   ];
 
   it.each(requiredImages)('file %s exists and has non-zero size', (relPath) => {

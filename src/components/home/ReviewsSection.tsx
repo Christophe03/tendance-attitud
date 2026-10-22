@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { REVIEWS } from '../../data/reviews';
@@ -65,34 +66,21 @@ export default function ReviewsSection() {
     >
       {/* Calligraphy & Editorial Header matching Canva mockup */}
       <div className="flex flex-col items-center justify-center text-center mb-8 sm:mb-12 select-none px-4">
-        <h2 className="relative inline-flex flex-col items-end">
-          {/* Top row: 'Vous nous faites' followed by 4 gold stars */}
-          <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-wrap sm:flex-nowrap justify-center sm:justify-start">
-            <span className="font-luxurious text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-gold-400 font-normal tracking-wide drop-shadow-sm leading-none py-1 [text-shadow:_0_0_1px_rgba(255,232,139,0.8)]">
-              <LetterReveal text="Vous nous faites" stagger={0.04} />
-            </span>
+        <h2 className="relative inline-flex items-center justify-center">
+          {/* Accessible text for SEO, test runners & screen readers */}
+          <span className="sr-only">
+            <span>Vous nous faites</span> <span>confiance</span>
+          </span>
 
-            {/* 4 Gold Stars directly after 'faites' */}
-            <div
-              className="flex items-center gap-1 sm:gap-1.5 text-gold-400 pb-1 sm:pb-2"
-              aria-label="Évaluation de 4 étoiles sur 5"
-            >
-              {[...Array(4)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 fill-[#FFE88B] text-[#FFE88B]"
-                  aria-hidden="true"
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Bottom row: 'confiance' aligned to the right (under the stars & tail of 'faites') */}
-          <div className="w-full flex justify-end -mt-2 sm:-mt-4 md:-mt-5 pr-0.5 sm:pr-1">
-            <span className="font-times-cond text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-gold-400 font-bold tracking-[-0.04em] leading-none lowercase">
-              <LetterReveal text="confiance" stagger={0.04} />
-            </span>
-          </div>
+          {/* Exact pixel-perfect artwork from design mockup with 0 drift and identical spacing */}
+          <Image
+            src="/images/vous-nous-faites-confiance@2x.webp"
+            alt="Vous nous faites confiance"
+            width={470}
+            height={88}
+            priority
+            className="w-auto h-12 sm:h-16 md:h-20 lg:h-22 max-w-[90vw] object-contain drop-shadow-sm pointer-events-none"
+          />
         </h2>
       </div>
 
