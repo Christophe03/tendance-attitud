@@ -22,13 +22,13 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
             <a
               href="#prestations"
-              className="text-lg font-semibold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
+              className="text-lg font-bold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
             >
               Prestations
             </a>
             <a
               href="#equipe"
-              className="text-lg font-semibold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
+              className="text-lg font-bold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
             >
               Équipe
             </a>
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#contact"
-              className="text-lg font-semibold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
+              className="text-lg font-bold tracking-wider text-[#FFE88B] hover:text-white transition-colors"
             >
               Contactez-nous
             </a>
@@ -68,7 +68,7 @@ export default function Header() {
               target="_blank"
               variant="gold"
               size="md"
-              className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg text-base font-semibold tracking-wider"
+              className="shadow-sm hover:shadow-md px-6 py-2.5 rounded-lg text-base font-bold tracking-wider"
             >
               PRENDRE RDV
             </Button>
@@ -111,21 +111,21 @@ export default function Header() {
                 <a
                   href="#prestations"
                   onClick={closeMenu}
-                  className="px-3 py-2.5 rounded-md text-lg font-semibold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
+                  className="px-3 py-2.5 rounded-md text-lg font-bold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
                 >
                   Prestations
                 </a>
                 <a
                   href="#equipe"
                   onClick={closeMenu}
-                  className="px-3 py-2.5 rounded-md text-lg font-semibold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
+                  className="px-3 py-2.5 rounded-md text-lg font-bold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
                 >
                   Équipe
                 </a>
                 <a
                   href="#contact"
                   onClick={closeMenu}
-                  className="px-3 py-2.5 rounded-md text-lg font-semibold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
+                  className="px-3 py-2.5 rounded-md text-lg font-bold text-[#FFE88B] hover:bg-[#2E361E] hover:text-white transition-colors tracking-wide"
                 >
                   Contactez-nous
                 </a>
@@ -134,7 +134,7 @@ export default function Header() {
               <div className="pt-2 border-t border-[#FFE88B]/20 flex flex-col gap-3">
                 <a
                   href={`tel:${SALON_INFO.phoneRaw}`}
-                  className="flex items-center justify-center gap-2 px-4 py-3 text-base font-semibold rounded-lg border border-[#FFE88B]/50 text-[#FFE88B] hover:bg-[#FFE88B]/10 transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 text-base font-bold rounded-lg border border-[#FFE88B]/50 text-[#FFE88B] hover:bg-[#FFE88B]/10 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>06 59 26 65 33</span>
@@ -145,7 +145,7 @@ export default function Header() {
                   target="_blank"
                   variant="gold"
                   size="md"
-                  className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg text-base font-semibold"
+                  className="w-full flex items-center justify-center gap-2 py-3 shadow-md rounded-lg text-base font-bold"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>PRENDRE RDV</span>
