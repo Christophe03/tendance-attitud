@@ -35,18 +35,19 @@ export default function Header() {
           </nav>
 
           {/* Center Logo - enlarged & overlapping center hero card */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-2 sm:top-2 md:top-2 z-50">
+          <div className="absolute left-1/2 -translate-x-1/2 top-1 sm:top-1.5 md:top-2 z-50">
             <Link
               href="/"
               className="group relative flex items-center justify-center rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-105"
               aria-label="Retour à l'accueil Salon Tendance Attitud"
             >
-              <div className="w-22 h-22 sm:w-26 sm:h-26 md:w-32 md:h-32 rounded-full overflow-hidden p-1.5 sm:p-2 bg-white flex items-center justify-center">
+              <div className="w-[68px] h-[68px] sm:w-[88px] sm:h-[88px] md:w-[112px] md:h-[112px] lg:w-[132px] lg:h-[132px] xl:w-[145px] xl:h-[145px] rounded-full overflow-hidden p-1 sm:p-1.5 md:p-2 bg-white flex items-center justify-center transition-all duration-300">
                 <Image
                   src="/images/logo.png"
                   alt="Logo Salon Tendance Attitud Allauch"
-                  width={140}
-                  height={140}
+                  width={145}
+                  height={145}
+                  sizes="(max-width: 640px) 68px, (max-width: 768px) 88px, (max-width: 1024px) 112px, (max-width: 1280px) 132px, 145px"
                   className="w-full h-full object-contain"
                   priority
                 />
